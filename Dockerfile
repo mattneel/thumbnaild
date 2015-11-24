@@ -47,6 +47,8 @@ RUN rm -f /etc/service/sshd/down
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Pull in application
+RUN git clone https://github.com/mattneel/thumbnaild.git /thumbnaild
 # Expose webservice port
 EXPOSE 8001
 
