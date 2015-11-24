@@ -65,11 +65,12 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-     sudo apt-get update -y && sudo apt-get dist-upgrade -y && sudo apt-get install -y --no-install-recommends libreoffice git libreoffice-script-provider-python unoconv poppler-utils imagemagick netpbm
+     sudo apt-get update -y && sudo apt-get dist-upgrade -y && sudo apt-get install -y --no-install-recommends libreoffice git python-dev python-pip libreoffice-script-provider-python unoconv poppler-utils imagemagick netpbm default-jre
      sudo pip install flask
-#     sudo cp /home/vagrant/thumbnailer/thumbnailer.upstart.conf /etc/init/thumbnailer.conf
+     sudo cp /vagrant/thumbnaild.upstart.conf /etc/init/thumbnaild.conf
      sudo cp /vagrant/soffice.upstart.conf /etc/init/soffice.conf
      sudo service soffice start
-#     sudo service thumbnailer start
+     sudo service thumbnaild start
+     echo "Thumbnaild webservice listening on: http://localhost:8001"
    SHELL
 end
