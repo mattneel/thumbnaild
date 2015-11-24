@@ -1,0 +1,8 @@
+thumbnaild:
+    build: .
+    restart: always
+    ports:
+        - "8001:8001"
+    volumes:
+        - .:/thumbnaild
+    container_name: thumbnaild

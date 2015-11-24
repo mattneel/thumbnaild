@@ -7,7 +7,7 @@ import time
 import tempfile
 
 UPLOAD_FOLDER = "/tmp"
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'ppt', 'pptx' ,'xls', 'xlsx', 'doc', 'docx'])
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'ppt', 'pptx' ,'xls', 'xlsx', 'doc', 'docx', 'odt', 'avi', 'ogg'])
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER

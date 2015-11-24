@@ -2,4 +2,4 @@
 Python Flask service for generating thumbnails from document files.
 
 For Vagrant: `vagrant up`
-For Docker: `docker run -d -v .:/thumbnaild .`
+For Docker-Compose: `docker-compose up -d`
